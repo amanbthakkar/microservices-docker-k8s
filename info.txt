@@ -1,0 +1,12 @@
+client: the react website as frontend
+posts: service to create new posts, and then send post creation event to event-bus
+comments: service to create new commends, and send events to event-bus
+moderation: takes each comment and checks if 'orange' is present in the service or not
+query: the actual microservice which runs and returns the values to client
+
+infra: the docker and k8s setup
+
+nodemon: to restart servers automatically
+cors: to prevent errors when browser requests are made across domain names (have to be server side  implementation)
+i think internal requests are fine, and thus since event-bus is not accessible from browser,
+it doesn't need to handle cors
